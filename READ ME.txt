@@ -1,0 +1,6 @@
+1)Para o video nao passar de 5 minutos, precisei fazer um corte durante a apresentaçâo do front-end, por isso a apresentação do front ficou
+incompleta.
+
+2) o codigo completo está nesse repositório do github https://github.com/fanthed10/Trab1persistencia-02A
+
+3) para rodar o front, precisa apenas rodar o fastapi e abrir o arquivo index.html
