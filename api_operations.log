@@ -1,0 +1,136 @@
+2024-12-04 12:25:18,172 - INFO - 12 pedidos carregados do arquivo CSV.
+2024-12-04 12:25:18,172 - INFO - Lista de pedidos requisitada, total de 12 pedidos.
+2024-12-04 12:26:39,288 - INFO - 12 pedidos carregados do arquivo CSV.
+2024-12-04 12:26:39,288 - INFO - Lista de pedidos requisitada, total de 12 pedidos.
+2024-12-04 12:27:18,463 - INFO - 12 pedidos carregados do arquivo CSV.
+2024-12-04 12:27:18,463 - WARNING - Tentativa de criar pedido com ID duplicado: 100
+2024-12-04 12:27:45,649 - INFO - 12 pedidos carregados do arquivo CSV.
+2024-12-04 12:27:45,650 - INFO - 13 pedidos foram salvos no arquivo CSV.
+2024-12-04 12:27:45,650 - INFO - Pedido com ID 101 criado com sucesso.
+2024-12-04 12:30:48,046 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 12:30:48,046 - INFO - Total de 13 pedidos cadastrados.
+2024-12-04 12:31:07,829 - INFO - Hash SHA256 do arquivo CSV calculado com sucesso.
+2024-12-04 12:31:25,833 - INFO - Arquivo CSV compactado com sucesso em database.zip.
+2024-12-04 12:32:51,486 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 12:32:51,486 - INFO - Filtragem aplicada: 12 pedidos encontrados.
+2024-12-04 20:54:03,114 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:54:03,117 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:56:00,873 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:56:00,873 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:56:09,583 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:56:09,583 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:56:09,782 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:56:09,782 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:56:09,953 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:56:09,953 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:56:10,169 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:56:10,170 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:56:48,629 - INFO - Arquivo CSV compactado com sucesso em database.zip.
+2024-12-04 20:57:25,161 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:57:25,162 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:57:25,327 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:57:25,327 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:57:25,523 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:57:25,523 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:57:25,735 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:57:25,736 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:57:26,162 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:57:26,163 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:57:26,354 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:57:26,355 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:57:26,570 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:57:26,571 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:57:29,852 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:57:29,852 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 20:59:19,605 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 20:59:19,606 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 21:03:37,391 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 21:03:37,391 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 21:05:55,832 - INFO - 12 pedidos carregados do arquivo CSV.
+2024-12-04 21:05:55,832 - INFO - Lista de pedidos requisitada, total de 12 pedidos.
+2024-12-04 21:09:48,490 - INFO - 12 pedidos carregados do arquivo CSV.
+2024-12-04 21:09:48,493 - INFO - 13 pedidos foram salvos no arquivo CSV.
+2024-12-04 21:09:48,493 - INFO - Pedido com ID 150 criado com sucesso.
+2024-12-04 21:10:05,692 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 21:10:05,692 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 21:11:20,250 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 21:11:20,258 - INFO - 14 pedidos foram salvos no arquivo CSV.
+2024-12-04 21:11:20,259 - INFO - Pedido com ID 15 criado com sucesso.
+2024-12-04 21:11:23,464 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:11:23,465 - INFO - Lista de pedidos requisitada, total de 14 pedidos.
+2024-12-04 21:11:38,574 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:11:38,581 - INFO - 13 pedidos foram salvos no arquivo CSV.
+2024-12-04 21:11:38,581 - INFO - Pedido com ID 15 deletado com sucesso.
+2024-12-04 21:11:40,933 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 21:11:40,934 - INFO - Lista de pedidos requisitada, total de 13 pedidos.
+2024-12-04 21:23:39,377 - INFO - 13 pedidos carregados do arquivo CSV.
+2024-12-04 21:23:39,383 - INFO - 14 pedidos foram salvos no arquivo CSV.
+2024-12-04 21:23:39,385 - INFO - Pedido com ID 15 criado com sucesso.
+2024-12-04 21:23:41,863 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:23:41,864 - INFO - Lista de pedidos requisitada, total de 14 pedidos.
+2024-12-04 21:23:52,569 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:23:52,570 - INFO - Pedido com ID 1 encontrado.
+2024-12-04 21:24:29,976 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:24:29,980 - INFO - 14 pedidos foram salvos no arquivo CSV.
+2024-12-04 21:24:29,981 - INFO - Pedido com ID 15 atualizado com sucesso.
+2024-12-04 21:24:32,367 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:24:32,368 - INFO - Lista de pedidos requisitada, total de 14 pedidos.
+2024-12-04 21:24:41,678 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:24:41,679 - INFO - Total de 14 pedidos cadastrados.
+2024-12-04 21:30:47,179 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:30:47,180 - INFO - Lista de pedidos requisitada, total de 14 pedidos.
+2024-12-04 21:30:56,324 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:30:56,325 - INFO - Lista de pedidos requisitada, total de 14 pedidos.
+2024-12-04 21:31:36,459 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:31:36,460 - INFO - Lista de pedidos requisitada, total de 14 pedidos.
+2024-12-04 21:33:40,077 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:33:40,078 - WARNING - Tentativa de criar pedido com ID duplicado: 100
+2024-12-04 21:33:49,155 - INFO - 14 pedidos carregados do arquivo CSV.
+2024-12-04 21:33:49,159 - INFO - 15 pedidos foram salvos no arquivo CSV.
+2024-12-04 21:33:49,160 - INFO - Pedido com ID 19 criado com sucesso.
+2024-12-04 21:33:51,699 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-04 21:33:51,700 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-04 21:35:57,221 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-04 21:35:57,223 - INFO - Total de 15 pedidos cadastrados.
+2024-12-05 10:47:51,311 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:47:51,312 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 10:49:11,401 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:49:11,402 - INFO - Pedido com ID 1 encontrado.
+2024-12-05 10:52:26,305 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:52:26,305 - INFO - Filtragem aplicada: 0 pedidos encontrados.
+2024-12-05 10:56:10,159 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:56:10,160 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 10:56:17,238 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:56:17,238 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 10:56:23,780 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:56:23,780 - INFO - Par�metros recebidos: cliente_id=1001, valor_minimo=None, valor_maximo=None, quantidade_minima=None, quantidade_maxima=None
+2024-12-05 10:56:23,780 - INFO - 1 pedidos encontrados ap�s filtragem.
+2024-12-05 10:56:25,672 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:56:25,672 - INFO - Par�metros recebidos: cliente_id=1001, valor_minimo=None, valor_maximo=None, quantidade_minima=None, quantidade_maxima=None
+2024-12-05 10:56:25,672 - INFO - 1 pedidos encontrados ap�s filtragem.
+2024-12-05 10:56:36,884 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:56:36,885 - INFO - Par�metros recebidos: cliente_id=None, valor_minimo=None, valor_maximo=None, quantidade_minima=None, quantidade_maxima=None
+2024-12-05 10:56:36,885 - INFO - 15 pedidos encontrados ap�s filtragem.
+2024-12-05 10:56:44,349 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 10:56:44,350 - INFO - Par�metros recebidos: cliente_id=None, valor_minimo=20.0, valor_maximo=None, quantidade_minima=None, quantidade_maxima=None
+2024-12-05 10:56:44,350 - INFO - 15 pedidos encontrados ap�s filtragem.
+2024-12-05 11:03:21,591 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:03:21,593 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 11:03:30,919 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:03:30,919 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 11:03:39,452 - INFO - Arquivo CSV compactado com sucesso em database.zip.
+2024-12-05 11:03:53,026 - INFO - Hash SHA256 do arquivo CSV calculado com sucesso.2024-12-05 11:12:43,363 - INFO - Arquivo CSV compactado com sucesso em database.zip.
+2024-12-05 11:13:09,138 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:13:09,138 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 11:13:09,552 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:13:09,552 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 11:13:30,192 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:13:30,192 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 11:20:20,429 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:20:20,429 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 11:20:20,934 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:20:20,934 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 11:20:21,479 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:20:21,480 - INFO - Lista de pedidos requisitada, total de 15 pedidos.
+2024-12-05 11:31:09,169 - INFO - 15 pedidos carregados do arquivo CSV.
+2024-12-05 11:31:09,170 - INFO - Lista de pedidos requisitada, total de 15 pedidos.

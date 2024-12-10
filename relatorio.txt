@@ -1,0 +1,72 @@
+1) CRIACAO DE PEDIDOS:
+
+Endpoint: POST /pedidos
+Descrição: Insere um novo pedido no arquivo CSV após verificar se o ID é único. Valida campos como valor_total e quantidade_itens para garantir que sejam maiores que zero.
+Status Code de Sucesso: 201 Created
+
+2) LEITURA DE PEDIDOS:
+
+Todos os pedidos:
+
+    Endpoint: GET /pedidos
+    Retorna uma lista com todos os pedidos cadastrados.
+
+Pedido específico:
+
+    Endpoint: GET /pedidos/{pedido_id}
+    Retorna o pedido correspondente ao ID fornecido.
+
+3) ATUALIZACAO DE PEDIDOS:
+
+Endpoint: PUT /pedidos/{pedido_id}
+Atualiza as informações de um pedido existente com base no ID.
+
+4) EXCLUSÂO DE PEDIDOS:
+
+Endpoint: DELETE /pedidos/{pedido_id}
+Remove um pedido do arquivo CSV pelo ID.
+
+5) QUANTIDADE DE PEDIDOS:
+
+    Endpoint: GET /pedidosquantidade
+    Retorna o número total de pedidos cadastrados.
+
+6) COMPACTAÇÂO DO CSV:
+
+Endpoint: GET /pedidoscompactar
+Compacta o arquivo CSV em um arquivo .zip e o disponibiliza para download.
+
+7) FILTRAGEM DE PEDIDOS:
+
+Endpoint: GET /pedidosfiltrar
+Permite filtrar pedidos com base em critérios como:
+
+    cliente_id
+    Intervalo de valores (valor_minimo, valor_maximo)
+    Quantidade de itens (quantidade_minima, quantidade_maxima).
+
+8) HASH SHA256 DO CSV:
+
+Endpoint: GET /pedidoshash
+Calcula o hash SHA256 do arquivo CSV para verificar sua integridade.
+
+9) PERSISTENCIA DE DADOS:
+
+ Persistência dos Dados
+
+    Formato: CSV
+    Motivação: Simplicidade e facilidade de manipulação.
+    Métodos Implementados:
+        Leitura: Carrega os pedidos do CSV para memória usando csv.DictReader.
+        Escrita: Salva os pedidos no arquivo usando csv.DictWriter.
+
+10) LOGGING:
+
+Configuração de um sistema de log rotativo usando RotatingFileHandler:
+
+    Limite de tamanho do arquivo: 5 MB.
+    Backup de 3 versões antigas.
+    Registros incluem:
+        Sucessos e falhas em operações.
+        Quantidade de pedidos carregados ou salvos.
+        Parâmetros de filtragem recebidos.        

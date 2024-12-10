@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Pedidos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        form {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        form input, form button {
+            margin: 5px;
+        }
+        button {
+            cursor: pointer;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        #hash-resultado {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestão de Pedidos</h1>
+    </header>
+    <main>
+        <h2>Pedidos</h2>
+        <table id="pedidos-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente ID</th>
+                    <th>Valor Total</th>
+                    <th>Data</th>
+                    <th>Quantidade de Itens</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Adicionar Pedido</h2>
+        <form id="add-pedido-form">
+            <div class="form-group">
+                <input type="number" id="pedido-id" placeholder="ID" required />
+                <input type="number" id="cliente-id" placeholder="Cliente ID" required />
+                <input type="number" id="valor-total" placeholder="Valor Total" step="0.01" required />
+                <input type="datetime-local" id="data" required />
+                <input type="number" id="quantidade-itens" placeholder="Quantidade de Itens" required />
+            </div>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <h2>Consultar Pedido por ID</h2>
+        <form id="consultar-pedido-form">
+            <input type="number" id="consulta-id" placeholder="ID do Pedido" required />
+            <button type="submit">Consultar</button>
+        </form>
+        <div id="consulta-resultado"></div>
+
+        <h2>Atualizar Pedido</h2>
+        <form id="atualizar-pedido-form">
+            <div class="form-group">
+                <input type="number" id="atualizar-id" placeholder="ID do Pedido" required />
+                <input type="number" id="atualizar-cliente-id" placeholder="Cliente ID" required />
+                <input type="number" id="atualizar-valor-total" placeholder="Valor Total" step="0.01" required />
+                <input type="datetime-local" id="atualizar-data" required />
+                <input type="number" id="atualizar-quantidade-itens" placeholder="Quantidade de Itens" required />
+            </div>
+            <button type="submit">Atualizar</button>
+        </form>
+
+        <h2>Quantidade de Pedidos</h2>
+        <button id="quantidade-pedidos">Obter Quantidade</button>
+        <div id="quantidade-resultado"></div>
+
+        <h2>Filtrar Pedidos</h2>
+        <form id="filtrar-pedidos-form">
+            <div class="form-group">
+                <input type="number" id="filtro-cliente-id" placeholder="Cliente ID" />
+                <input type="number" id="filtro-valor-min" placeholder="Valor Mínimo" />
+                <input type="number" id="filtro-valor-max" placeholder="Valor Máximo" />
+                <input type="number" id="filtro-quantidade-min" placeholder="Quantidade Mínima" />
+                <input type="number" id="filtro-quantidade-max" placeholder="Quantidade Máxima" />
+            </div>
+            <button type="submit">Filtrar</button>
+        </form>
+
+        <h2>Funções Extras</h2>
+        <div>
+            <button id="compactar-csv">Compactar CSV</button>
+            <button id="gerar-hash">Gerar Hash SHA256</button>
+        </div>
+        <div id="hash-resultado"></div>
+    </main>
+
+    <script>
+        const API_BASE = "http://127.0.0.1:8000";
+
+        async function fetchPedidos() {
+            const response = await fetch(`${API_BASE}/pedidos`);
+            const pedidos = await response.json();
+            const tableBody = document.querySelector("#pedidos-table tbody");
+            tableBody.innerHTML = "";
+
+            pedidos.forEach((pedido) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${pedido.id}</td>
+                    <td>${pedido.cliente_id}</td>
+                    <td>${pedido.valor_total}</td>
+                    <td>${pedido.data}</td>
+                    <td>${pedido.quantidade_itens}</td>
+                    <td>
+                        <button onclick="deletePedido(${pedido.id})">Excluir</button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        document.getElementById("add-pedido-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const novoPedido = {
+                id: parseInt(document.getElementById("pedido-id").value),
+                cliente_id: parseInt(document.getElementById("cliente-id").value),
+                valor_total: parseFloat(document.getElementById("valor-total").value),
+                data: document.getElementById("data").value,
+                quantidade_itens: parseInt(document.getElementById("quantidade-itens").value),
+            };
+
+            const response = await fetch(`${API_BASE}/pedidos`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(novoPedido),
+            });
+
+            if (response.ok) {
+                alert("Pedido adicionado com sucesso!");
+                fetchPedidos();
+            } else {
+                const error = await response.json();
+                alert(`Erro: ${error.detail}`);
+            }
+        });
+
+        document.getElementById("consultar-pedido-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const pedidoId = document.getElementById("consulta-id").value;
+            const response = await fetch(`${API_BASE}/pedidos/${pedidoId}`);
+            const resultDiv = document.getElementById("consulta-resultado");
+
+            if (response.ok) {
+                const pedido = await response.json();
+                resultDiv.innerHTML = `Pedido encontrado: Cliente ID: ${pedido.cliente_id}, Valor: ${pedido.valor_total}`;
+            } else {
+                resultDiv.innerHTML = "Pedido não encontrado.";
+            }
+        });
+
+        document.getElementById("atualizar-pedido-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const pedidoAtualizado = {
+                id: parseInt(document.getElementById("atualizar-id").value),
+                cliente_id: parseInt(document.getElementById("atualizar-cliente-id").value),
+                valor_total: parseFloat(document.getElementById("atualizar-valor-total").value),
+                data: document.getElementById("atualizar-data").value,
+                quantidade_itens: parseInt(document.getElementById("atualizar-quantidade-itens").value),
+            };
+
+            const response = await fetch(`${API_BASE}/pedidos/${pedidoAtualizado.id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(pedidoAtualizado),
+            });
+
+            if (response.ok) {
+                alert("Pedido atualizado com sucesso!");
+                fetchPedidos();
+            } else {
+                const error = await response.json();
+                alert(`Erro: ${error.detail}`);
+            }
+        });
+
+        document.getElementById("quantidade-pedidos").addEventListener("click", async () => {
+            const response = await fetch(`${API_BASE}/pedidosquantidade`);
+            const result = await response.json();
+            document.getElementById("quantidade-resultado").innerText = `Quantidade de pedidos: ${result.quantidade}`;
+        });
+
+        document.getElementById("filtrar-pedidos-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const params = new URLSearchParams();
+            const clienteId = document.getElementById("filtro-cliente-id").value;
+            const valorMin = document.getElementById("filtro-valor-min").value;
+            const valorMax = document.getElementById("filtro-valor-max").value;
+            const quantidadeMin = document.getElementById("filtro-quantidade-min").value;
+            const quantidadeMax = document.getElementById("filtro-quantidade-max").value;
+
+            if (clienteId) params.append("cliente_id", clienteId);
+            if (valorMin) params.append("valor_minimo", valorMin);
+            if (valorMax) params.append("valor_maximo", valorMax);
+            if (quantidadeMin) params.append("quantidade_minima", quantidadeMin);
+            if (quantidadeMax) params.append("quantidade_maxima", quantidadeMax);
+
+            const url = `${API_BASE}/pedidosfiltrar?${params}`;
+            console.log(`Filtrando com URL: ${url}`);
+
+            const response = await fetch(url);
+            const tableBody = document.querySelector("#pedidos-table tbody");
+            tableBody.innerHTML = "";
+
+            if (response.ok) {
+                const pedidos = await response.json();
+                if (pedidos.length > 0) {
+                    pedidos.forEach((pedido) => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${pedido.id}</td>
+                            <td>${pedido.cliente_id}</td>
+                            <td>${pedido.valor_total}</td>
+                            <td>${pedido.data}</td>
+                            <td>${pedido.quantidade_itens}</td>
+                            <td>
+                                <button onclick="deletePedido(${pedido.id})">Excluir</button>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                } else {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `<td colspan="6" style="text-align: center;">Nenhum pedido encontrado.</td>`;
+                    tableBody.appendChild(row);
+                }
+            } else {
+                alert("Erro ao filtrar pedidos.");
+            }
+        });
+
+        document.getElementById("compactar-csv").addEventListener("click", async () => {
+            try {
+                const response = await fetch(`${API_BASE}/pedidoscompactar`, { method: "GET" });
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+
+                    const link = document.createElement("a");
+                    link.href = url;
+                    link.download = "database.zip";
+                    document.body.appendChild(link);
+                    link.click();
+                    link.remove();
+
+                    alert("Arquivo compactado baixado com sucesso!");
+                } else {
+                    alert("Erro ao compactar o arquivo CSV.");
+                }
+            } catch (error) {
+                console.error("Erro ao compactar arquivo:", error);
+                alert("Erro ao conectar ao servidor.");
+            }
+        });
+
+        document.getElementById("gerar-hash").addEventListener("click", async () => {
+            try {
+                const response = await fetch(`${API_BASE}/pedidoshash`, { method: "GET" });
+                if (response.ok) {
+                    const result = await response.json();
+                    const hashResult = document.getElementById("hash-resultado");
+                    hashResult.textContent = `Hash SHA256: ${result.hash_sha256}`;
+                } else {
+                    alert("Erro ao gerar o hash do arquivo CSV.");
+                }
+            } catch (error) {
+                console.error("Erro ao gerar hash:", error);
+                alert("Erro ao conectar ao servidor.");
+            }
+        });
+
+        async function deletePedido(id) {
+            const response = await fetch(`${API_BASE}/pedidos/${id}`, { method: "DELETE" });
+
+            if (response.ok) {
+                alert("Pedido excluído com sucesso!");
+                fetchPedidos();
+            } else {
+                alert("Erro ao excluir pedido.");
+            }
+        }
+
+        fetchPedidos();
+    </script>
+</body>
+</html>
